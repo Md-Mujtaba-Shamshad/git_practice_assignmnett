@@ -1,9 +1,12 @@
-function prime(num){
-    for(let i=3;i<=num;i++){
-      if(num%i==2){
-        return "prime"
-      }else if(num%i!==2){
-        return "not a prime"
-      }
+function prime(num) {
+  if (num < 2) {
+    return 'not a prime';
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return 'not a prime';
     }
-}console.log(prime(7))
+  }
+  return 'prime';
+}
+console.log(prime(7));
